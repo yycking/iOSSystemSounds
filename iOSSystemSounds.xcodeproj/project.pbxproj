@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF10E0D71F7502B70063A9DC /* UIBarButtonSystemItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */; };
+		AF10E0D91F75092F0063A9DC /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10E0D81F75092F0063A9DC /* SoundCell.swift */; };
 		AF15384B1F7364FD00FDEE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15384A1F7364FD00FDEE20 /* AppDelegate.swift */; };
 		AF15384D1F7364FD00FDEE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15384C1F7364FD00FDEE20 /* ViewController.swift */; };
 		AF1538501F7364FD00FDEE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF15384E1F7364FD00FDEE20 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		AF1538551F7364FD00FDEE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1538531F7364FD00FDEE20 /* LaunchScreen.storyboard */; };
 		AF1538601F7364FD00FDEE20 /* iOSSystemSoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15385F1F7364FD00FDEE20 /* iOSSystemSoundsTests.swift */; };
 		AF15386B1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */; };
+		AF1538791F73666600FDEE20 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1538781F73666600FDEE20 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonSystemItem+.swift"; sourceTree = "<group>"; };
+		AF10E0D81F75092F0063A9DC /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		AF1538471F7364FD00FDEE20 /* iOSSystemSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSystemSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15384A1F7364FD00FDEE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF15384C1F7364FD00FDEE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		AF1538661F7364FD00FDEE20 /* iOSSystemSoundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSystemSoundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSystemSoundsUITests.swift; sourceTree = "<group>"; };
 		AF15386C1F7364FD00FDEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1538781F73666600FDEE20 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				AF1538511F7364FD00FDEE20 /* Assets.xcassets */,
 				AF1538531F7364FD00FDEE20 /* LaunchScreen.storyboard */,
 				AF1538561F7364FD00FDEE20 /* Info.plist */,
+				AF1538781F73666600FDEE20 /* Sound.swift */,
+				AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */,
+				AF10E0D81F75092F0063A9DC /* SoundCell.swift */,
 			);
 			path = iOSSystemSounds;
 			sourceTree = "<group>";
@@ -260,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF15384D1F7364FD00FDEE20 /* ViewController.swift in Sources */,
+				AF10E0D71F7502B70063A9DC /* UIBarButtonSystemItem+.swift in Sources */,
+				AF1538791F73666600FDEE20 /* Sound.swift in Sources */,
+				AF10E0D91F75092F0063A9DC /* SoundCell.swift in Sources */,
 				AF15384B1F7364FD00FDEE20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +439,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZRU74Q6CGE;
 				INFOPLIST_FILE = iOSSystemSounds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZRU74Q6CGE;
 				INFOPLIST_FILE = iOSSystemSounds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
