@@ -25,7 +25,7 @@ extension UIBarButtonSystemItem {
         for view in itemView.subviews {
             if let button = view as? UIButton,
                 let image = button.imageView?.image {
-                return image.withRenderingMode(.alwaysTemplate)
+                return image
             }
         }
         

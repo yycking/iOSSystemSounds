@@ -11,10 +11,14 @@ import AudioToolbox
 
 class ViewController: UITableViewController {
     var sounds = Sound.systemSounds
+    var filterBookMark = false
+    let bookIcon = UIButtonType.infoLight.image()
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
+        searchController.searchBar.showsBookmarkButton = true;
+        searchController.searchBar.setImage(bookIcon, for: .bookmark, state: .normal)
         return searchController
     }()
 
@@ -35,10 +39,13 @@ class ViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sound = sounds[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
                                                  for: indexPath)
-        cell.textLabel?.text = sounds[indexPath.row].fileName
+        cell.textLabel?.text = sound.fileName
         cell.imageView?.image = UIBarButtonSystemItem.play.image()
+        cell.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
         
         return cell
     }
@@ -52,7 +59,7 @@ class ViewController: UITableViewController {
         AudioServicesCreateSystemSoundID(url, &soundID)
         
         let cell = tableView.cellForRow(at: indexPath) as? SoundCell
-        cell?.imageView?.image = UIBarButtonSystemItem.pause.image()
+        cell?.imageView?.image = UIBarButtonSystemItem.play.image()?.withRenderingMode(.alwaysTemplate)
         cell?.bar.progress = 1
         
         AudioServicesPlaySystemSound(soundID)
@@ -66,6 +73,15 @@ class ViewController: UITableViewController {
                 cell?.imageView?.image = UIBarButtonSystemItem.play.image()
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        var sound = sounds[indexPath.row]
+        sound.bookMarked = !sound.bookMarked
+        
+        let cell = tableView.cellForRow(at: indexPath) as? SoundCell
+        cell?.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
     }
     
     @IBAction func action(_ sender: Any) {
@@ -93,8 +109,10 @@ class ViewController: UITableViewController {
     
     @IBAction func search(_ sender: Any) {
         self.tableView.tableHeaderView = searchController.searchBar
-//        searchController.isActive = true
         searchController.searchBar.becomeFirstResponder()
+        
+        let icon = filterBookMark ? bookIcon?.withRenderingMode(.alwaysTemplate) : bookIcon
+        searchController.searchBar.setImage(icon, for: .bookmark, state: .normal)
     }
     
 }
@@ -106,9 +124,21 @@ extension ViewController: UISearchResultsUpdating {
         sounds.removeAll(keepingCapacity: false)
         guard let searchText = searchController.searchBar.text else { return }
         
-        sounds = Sound.systemSounds.filter {
+        var array = Sound.systemSounds.filter {
             $0.fileName.lowercased().contains(searchText.lowercased())
         }
+        
+        if array.isEmpty {
+            array = Sound.systemSounds
+        }
+        
+        if filterBookMark {
+            array = array.filter{
+                $0.bookMarked
+            }
+        }
+        
+        sounds = array
         
         self.tableView.reloadData()
     }
@@ -125,5 +155,13 @@ extension ViewController: UISearchBarDelegate {
         self.tableView.reloadData()
         
         searchController.isActive = false
+    }
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        filterBookMark = !filterBookMark
+        
+        let icon = filterBookMark ? bookIcon?.withRenderingMode(.alwaysTemplate) : bookIcon
+        searchController.searchBar.setImage(icon, for: .bookmark, state: .normal)
+        
+        self.updateSearchResults(for: searchController)
     }
 }

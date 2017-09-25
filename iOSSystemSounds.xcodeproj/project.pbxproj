@@ -17,6 +17,7 @@
 		AF1538601F7364FD00FDEE20 /* iOSSystemSoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15385F1F7364FD00FDEE20 /* iOSSystemSoundsTests.swift */; };
 		AF15386B1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */; };
 		AF1538791F73666600FDEE20 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1538781F73666600FDEE20 /* Sound.swift */; };
+		AFCB5F361F7916FD0020F6E7 /* UIButtonType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB5F351F7916FD0020F6E7 /* UIButtonType+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSystemSoundsUITests.swift; sourceTree = "<group>"; };
 		AF15386C1F7364FD00FDEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF1538781F73666600FDEE20 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		AFCB5F351F7916FD0020F6E7 /* UIButtonType+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtonType+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				AF1538781F73666600FDEE20 /* Sound.swift */,
 				AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */,
 				AF10E0D81F75092F0063A9DC /* SoundCell.swift */,
+				AFCB5F351F7916FD0020F6E7 /* UIButtonType+.swift */,
 			);
 			path = iOSSystemSounds;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF15384D1F7364FD00FDEE20 /* ViewController.swift in Sources */,
+				AFCB5F361F7916FD0020F6E7 /* UIButtonType+.swift in Sources */,
 				AF10E0D71F7502B70063A9DC /* UIBarButtonSystemItem+.swift in Sources */,
 				AF1538791F73666600FDEE20 /* Sound.swift in Sources */,
 				AF10E0D91F75092F0063A9DC /* SoundCell.swift in Sources */,

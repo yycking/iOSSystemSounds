@@ -13,6 +13,15 @@ struct Sound {
     let path: URL
     let duration: Double
     
+    var bookMarked: Bool {
+        get {
+            return self.satate(key: "BookMarke")
+        }
+        set {
+            self.setState(value: newValue, for: "BookMarke")
+        }
+    }
+    
     static let systemSounds: [Sound] = {
         filesOnFolder(path: "/System/Library/Audio/UISounds").map{
             Sound(fileName: $0.deletingPathExtension().lastPathComponent,
@@ -43,5 +52,27 @@ struct Sound {
         }
         
         return urls
+    }
+    
+    func satate(key: String) -> Bool {
+        if let array = UserDefaults.standard.array(forKey: key) as? [String]{
+            return array.contains(path.absoluteString)
+        }
+        
+        return false
+    }
+    
+    func setState(value: Bool, for key: String) {
+        var array = UserDefaults.standard.array(forKey: key) as? [String] ?? [String]()
+        if let index = array.index(of: path.absoluteString) {
+            if value == false {
+                array.remove(at: index)
+            }
+        } else {
+            if value == true {
+                array.append(path.absoluteString)
+            }
+        }
+        UserDefaults.standard.setValue(array, forKey: key)
     }
 }
