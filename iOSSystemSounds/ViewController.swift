@@ -12,10 +12,12 @@ import AudioToolbox
 class ViewController: UITableViewController {
     var sounds = Sound.systemSounds
     var filterBookMark = false
+    var filterText: String?
     let bookIcon = UIButtonType.infoLight.image()
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchBar.showsBookmarkButton = true;
         searchController.searchBar.setImage(bookIcon, for: .bookmark, state: .normal)
@@ -101,7 +103,7 @@ class ViewController: UITableViewController {
         
         let sound = sounds[indexPath.row]
         
-        let activity = UIActivityViewController(activityItems: [sound.fileName], applicationActivities: nil)
+        let activity = UIActivityViewController(activityItems: [sound.path.absoluteString, sound.path], applicationActivities: nil)
         self.present(activity,
                      animated: true,
                      completion: nil)
@@ -144,14 +146,27 @@ extension ViewController: UISearchResultsUpdating {
     }
 }
 
+extension ViewController: UISearchControllerDelegate {
+    func willPresentSearchController(_ searchController: UISearchController) {
+        searchController.searchBar.text = filterText
+    }
+    func didDismissSearchController(_ searchController: UISearchController) {
+        self.tableView.tableHeaderView = nil
+    }
+}
+
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.tableView.tableHeaderView = nil
+        filterText = searchBar.text
         searchController.isActive = false
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         sounds = Sound.systemSounds
-        self.tableView.tableHeaderView = nil
+        if filterBookMark {
+            sounds = sounds.filter{
+                $0.bookMarked
+            }
+        }
         self.tableView.reloadData()
         
         searchController.isActive = false
