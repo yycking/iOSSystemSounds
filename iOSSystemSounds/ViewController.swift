@@ -34,6 +34,15 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func fixTableViewInsets() {
+        tableView.contentInset = tableView.scrollIndicatorInsets
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixTableViewInsets()
+    }
+    
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return sounds.count
@@ -115,6 +124,7 @@ class ViewController: UITableViewController {
         
         let icon = filterBookMark ? bookIcon?.withRenderingMode(.alwaysTemplate) : bookIcon
         searchController.searchBar.setImage(icon, for: .bookmark, state: .normal)
+        searchController.searchBar.text = filterText
     }
     
 }
@@ -147,11 +157,9 @@ extension ViewController: UISearchResultsUpdating {
 }
 
 extension ViewController: UISearchControllerDelegate {
-    func willPresentSearchController(_ searchController: UISearchController) {
-        searchController.searchBar.text = filterText
-    }
     func didDismissSearchController(_ searchController: UISearchController) {
         self.tableView.tableHeaderView = nil
+        self.tableView.reloadData()
     }
 }
 
