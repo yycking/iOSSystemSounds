@@ -34,67 +34,13 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func fixTableViewInsets() {
-        tableView.contentInset = tableView.scrollIndicatorInsets
-    }
-    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        fixTableViewInsets()
+        tableView.contentInset = tableView.scrollIndicatorInsets
     }
-    
-    override func tableView(_ tableView: UITableView,
-                            numberOfRowsInSection section: Int) -> Int {
-        return sounds.count
-    }
+}
 
-    override func tableView(_ tableView: UITableView,
-                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sound = sounds[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                 for: indexPath)
-        cell.textLabel?.text = sound.fileName
-        cell.imageView?.image = UIBarButtonSystemItem.play.image()
-        cell.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView,
-                            didSelectRowAt indexPath: IndexPath) {
-        let sound = sounds[indexPath.row]
-        
-        let url = sound.path as NSURL
-        var soundID:SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(url, &soundID)
-        
-        let cell = tableView.cellForRow(at: indexPath) as? SoundCell
-        cell?.imageView?.image = UIBarButtonSystemItem.play.image()?.withRenderingMode(.alwaysTemplate)
-        cell?.bar.progress = 1
-        
-        AudioServicesPlaySystemSound(soundID)
-        
-        UIView.animate(withDuration: sound.duration,
-                       animations: {
-                cell?.bar.layoutIfNeeded()
-        }) { (finish) in
-            DispatchQueue.main.async {
-                cell?.bar.progress = 0
-                cell?.imageView?.image = UIBarButtonSystemItem.play.image()
-            }
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView,
-                            accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        var sound = sounds[indexPath.row]
-        sound.bookMarked = !sound.bookMarked
-        
-        let cell = tableView.cellForRow(at: indexPath) as? SoundCell
-        cell?.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
-    }
-    
+extension ViewController {
     @IBAction func action(_ sender: Any) {
         guard let indexPath = self.tableView.indexPathForSelectedRow else {
             let alert = UIAlertController( title: nil,
@@ -126,7 +72,76 @@ class ViewController: UITableViewController {
         searchController.searchBar.setImage(icon, for: .bookmark, state: .normal)
         searchController.searchBar.text = filterText
     }
+}
+
+extension ViewController {
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return sounds.count
+    }
     
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sound = sounds[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+                                                 for: indexPath)
+        cell.textLabel?.text = sound.fileName
+        cell.imageView?.image = UIBarButtonSystemItem.play.image()
+        cell.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        let sound = sounds[indexPath.row]
+        
+        let url = sound.path as NSURL
+        var soundID:SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(url, &soundID)
+        
+        let cell = tableView.cellForRow(at: indexPath) as? SoundCell
+        cell?.imageView?.image = UIBarButtonSystemItem.play.image()?.withRenderingMode(.alwaysTemplate)
+        cell?.bar.progress = 1
+        
+        AudioServicesPlaySystemSound(soundID)
+        
+        UIView.animate(withDuration: sound.duration,
+                       animations: {
+                        cell?.bar.layoutIfNeeded()
+        }) { (finish) in
+            DispatchQueue.main.async {
+                cell?.bar.progress = 0
+                cell?.imageView?.image = UIBarButtonSystemItem.play.image()
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        var sound = sounds[indexPath.row]
+        sound.bookMarked = !sound.bookMarked
+        
+        let cell = tableView.cellForRow(at: indexPath) as? SoundCell
+        cell?.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return true;
+    }
+    
+    override func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return action == #selector(copy(_:))
+    }
+    
+    override func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        guard action == #selector(copy(_:)) else { return }
+        
+        let sound = sounds[indexPath.row]
+        UIPasteboard.general.url = sound.path
+        print(sound.path)
+    }
 }
 
 extension ViewController: UISearchResultsUpdating {
