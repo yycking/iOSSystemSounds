@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButtonType {
+extension UIButton.ButtonType {
     func image() -> UIImage? {
         let infoButton = UIButton(type: self)
         return infoButton.currentImage

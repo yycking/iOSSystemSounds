@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
     var sounds = Sound.systemSounds
     var filterBookMark = false
     var filterText: String?
-    let bookIcon = UIButtonType.infoLight.image()
+    let bookIcon = UIButton.ButtonType.infoLight.image()
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -36,7 +36,7 @@ class ViewController: UITableViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.contentInset = tableView.scrollIndicatorInsets
+//        tableView.contentInset = tableView.scrollIndicatorInsets
     }
 }
 
@@ -87,7 +87,7 @@ extension ViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
                                                  for: indexPath)
         cell.textLabel?.text = sound.fileName
-        cell.imageView?.image = UIBarButtonSystemItem.play.image()
+        cell.imageView?.image = UIImage(systemName: "play")
         cell.tintColor = sound.bookMarked ? UIColor.blue : UIColor.lightGray
         
         return cell
@@ -102,7 +102,7 @@ extension ViewController {
         AudioServicesCreateSystemSoundID(url, &soundID)
         
         let cell = tableView.cellForRow(at: indexPath) as? SoundCell
-        cell?.imageView?.image = UIBarButtonSystemItem.play.image()?.withRenderingMode(.alwaysTemplate)
+        cell?.imageView?.image = UIImage(systemName: "play")?.withRenderingMode(.alwaysTemplate)
         cell?.bar.progress = 1
         
         AudioServicesPlaySystemSound(soundID)
@@ -113,7 +113,7 @@ extension ViewController {
         }) { (finish) in
             DispatchQueue.main.async {
                 cell?.bar.progress = 0
-                cell?.imageView?.image = UIBarButtonSystemItem.play.image()
+                cell?.imageView?.image = UIImage(systemName: "play")
             }
         }
     }

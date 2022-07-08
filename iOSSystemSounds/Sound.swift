@@ -64,7 +64,7 @@ struct Sound {
     
     func setState(value: Bool, for key: String) {
         var array = UserDefaults.standard.array(forKey: key) as? [String] ?? [String]()
-        if let index = array.index(of: path.absoluteString) {
+        if let index = array.firstIndex(of: path.absoluteString) {
             if value == false {
                 array.remove(at: index)
             }

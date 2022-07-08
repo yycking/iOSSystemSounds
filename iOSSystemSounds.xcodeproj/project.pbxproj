@@ -7,38 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF10E0D71F7502B70063A9DC /* UIBarButtonSystemItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */; };
 		AF10E0D91F75092F0063A9DC /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10E0D81F75092F0063A9DC /* SoundCell.swift */; };
 		AF15384B1F7364FD00FDEE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15384A1F7364FD00FDEE20 /* AppDelegate.swift */; };
 		AF15384D1F7364FD00FDEE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15384C1F7364FD00FDEE20 /* ViewController.swift */; };
 		AF1538501F7364FD00FDEE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF15384E1F7364FD00FDEE20 /* Main.storyboard */; };
 		AF1538521F7364FD00FDEE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1538511F7364FD00FDEE20 /* Assets.xcassets */; };
 		AF1538551F7364FD00FDEE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1538531F7364FD00FDEE20 /* LaunchScreen.storyboard */; };
-		AF1538601F7364FD00FDEE20 /* iOSSystemSoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15385F1F7364FD00FDEE20 /* iOSSystemSoundsTests.swift */; };
-		AF15386B1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */; };
 		AF1538791F73666600FDEE20 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1538781F73666600FDEE20 /* Sound.swift */; };
 		AFCB5F361F7916FD0020F6E7 /* UIButtonType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB5F351F7916FD0020F6E7 /* UIButtonType+.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AF15385C1F7364FD00FDEE20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF15383F1F7364FD00FDEE20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF1538461F7364FD00FDEE20;
-			remoteInfo = iOSSystemSounds;
-		};
-		AF1538671F7364FD00FDEE20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF15383F1F7364FD00FDEE20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF1538461F7364FD00FDEE20;
-			remoteInfo = iOSSystemSounds;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonSystemItem+.swift"; sourceTree = "<group>"; };
 		AF10E0D81F75092F0063A9DC /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		AF1538471F7364FD00FDEE20 /* iOSSystemSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSystemSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15384A1F7364FD00FDEE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,10 +26,8 @@
 		AF1538511F7364FD00FDEE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1538541F7364FD00FDEE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF1538561F7364FD00FDEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF15385B1F7364FD00FDEE20 /* iOSSystemSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSystemSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15385F1F7364FD00FDEE20 /* iOSSystemSoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSystemSoundsTests.swift; sourceTree = "<group>"; };
 		AF1538611F7364FD00FDEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF1538661F7364FD00FDEE20 /* iOSSystemSoundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSystemSoundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15386A1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSystemSoundsUITests.swift; sourceTree = "<group>"; };
 		AF15386C1F7364FD00FDEE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF1538781F73666600FDEE20 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -59,20 +36,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF1538441F7364FD00FDEE20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF1538581F7364FD00FDEE20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF1538631F7364FD00FDEE20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				AF1538471F7364FD00FDEE20 /* iOSSystemSounds.app */,
-				AF15385B1F7364FD00FDEE20 /* iOSSystemSoundsTests.xctest */,
-				AF1538661F7364FD00FDEE20 /* iOSSystemSoundsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +73,6 @@
 				AF1538531F7364FD00FDEE20 /* LaunchScreen.storyboard */,
 				AF1538561F7364FD00FDEE20 /* Info.plist */,
 				AF1538781F73666600FDEE20 /* Sound.swift */,
-				AF10E0D61F7502B70063A9DC /* UIBarButtonSystemItem+.swift */,
 				AF10E0D81F75092F0063A9DC /* SoundCell.swift */,
 				AFCB5F351F7916FD0020F6E7 /* UIButtonType+.swift */,
 			);
@@ -157,42 +117,6 @@
 			productReference = AF1538471F7364FD00FDEE20 /* iOSSystemSounds.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF15385A1F7364FD00FDEE20 /* iOSSystemSoundsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF1538721F7364FD00FDEE20 /* Build configuration list for PBXNativeTarget "iOSSystemSoundsTests" */;
-			buildPhases = (
-				AF1538571F7364FD00FDEE20 /* Sources */,
-				AF1538581F7364FD00FDEE20 /* Frameworks */,
-				AF1538591F7364FD00FDEE20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF15385D1F7364FD00FDEE20 /* PBXTargetDependency */,
-			);
-			name = iOSSystemSoundsTests;
-			productName = iOSSystemSoundsTests;
-			productReference = AF15385B1F7364FD00FDEE20 /* iOSSystemSoundsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AF1538651F7364FD00FDEE20 /* iOSSystemSoundsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF1538751F7364FD00FDEE20 /* Build configuration list for PBXNativeTarget "iOSSystemSoundsUITests" */;
-			buildPhases = (
-				AF1538621F7364FD00FDEE20 /* Sources */,
-				AF1538631F7364FD00FDEE20 /* Frameworks */,
-				AF1538641F7364FD00FDEE20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF1538681F7364FD00FDEE20 /* PBXTargetDependency */,
-			);
-			name = iOSSystemSoundsUITests;
-			productName = iOSSystemSoundsUITests;
-			productReference = AF1538661F7364FD00FDEE20 /* iOSSystemSoundsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,22 +124,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Wayne Yeh";
 				TargetAttributes = {
 					AF1538461F7364FD00FDEE20 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-					};
-					AF15385A1F7364FD00FDEE20 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AF1538461F7364FD00FDEE20;
-					};
-					AF1538651F7364FD00FDEE20 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AF1538461F7364FD00FDEE20;
 					};
 				};
 			};
@@ -233,8 +147,6 @@
 			projectRoot = "";
 			targets = (
 				AF1538461F7364FD00FDEE20 /* iOSSystemSounds */,
-				AF15385A1F7364FD00FDEE20 /* iOSSystemSoundsTests */,
-				AF1538651F7364FD00FDEE20 /* iOSSystemSoundsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,20 +162,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF1538591F7364FD00FDEE20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF1538641F7364FD00FDEE20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,43 +171,13 @@
 			files = (
 				AF15384D1F7364FD00FDEE20 /* ViewController.swift in Sources */,
 				AFCB5F361F7916FD0020F6E7 /* UIButtonType+.swift in Sources */,
-				AF10E0D71F7502B70063A9DC /* UIBarButtonSystemItem+.swift in Sources */,
 				AF1538791F73666600FDEE20 /* Sound.swift in Sources */,
 				AF10E0D91F75092F0063A9DC /* SoundCell.swift in Sources */,
 				AF15384B1F7364FD00FDEE20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF1538571F7364FD00FDEE20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF1538601F7364FD00FDEE20 /* iOSSystemSoundsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF1538621F7364FD00FDEE20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF15386B1F7364FD00FDEE20 /* iOSSystemSoundsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AF15385D1F7364FD00FDEE20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF1538461F7364FD00FDEE20 /* iOSSystemSounds */;
-			targetProxy = AF15385C1F7364FD00FDEE20 /* PBXContainerItemProxy */;
-		};
-		AF1538681F7364FD00FDEE20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF1538461F7364FD00FDEE20 /* iOSSystemSounds */;
-			targetProxy = AF1538671F7364FD00FDEE20 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF15384E1F7364FD00FDEE20 /* Main.storyboard */ = {
@@ -345,6 +213,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -352,8 +221,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -379,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,6 +273,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -409,8 +281,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -430,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -445,11 +319,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZRU74Q6CGE;
 				INFOPLIST_FILE = iOSSystemSounds/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -461,74 +335,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZRU74Q6CGE;
 				INFOPLIST_FILE = iOSSystemSounds/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		AF1538731F7364FD00FDEE20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSSystemSoundsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSoundsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSSystemSounds.app/iOSSystemSounds";
-			};
-			name = Debug;
-		};
-		AF1538741F7364FD00FDEE20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSSystemSoundsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSoundsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSSystemSounds.app/iOSSystemSounds";
-			};
-			name = Release;
-		};
-		AF1538761F7364FD00FDEE20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSSystemSoundsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSoundsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iOSSystemSounds;
-			};
-			name = Debug;
-		};
-		AF1538771F7364FD00FDEE20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSSystemSoundsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.iOSSystemSoundsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iOSSystemSounds;
 			};
 			name = Release;
 		};
@@ -549,24 +361,6 @@
 			buildConfigurations = (
 				AF1538701F7364FD00FDEE20 /* Debug */,
 				AF1538711F7364FD00FDEE20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF1538721F7364FD00FDEE20 /* Build configuration list for PBXNativeTarget "iOSSystemSoundsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF1538731F7364FD00FDEE20 /* Debug */,
-				AF1538741F7364FD00FDEE20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF1538751F7364FD00FDEE20 /* Build configuration list for PBXNativeTarget "iOSSystemSoundsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF1538761F7364FD00FDEE20 /* Debug */,
-				AF1538771F7364FD00FDEE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
